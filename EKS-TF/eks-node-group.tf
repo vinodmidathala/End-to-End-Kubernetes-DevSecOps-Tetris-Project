@@ -11,8 +11,6 @@ resource "aws_eks_node_group" "eks-node-group" {
     min_size     = 1
   }
 
-  ami_type       = "CUSTOM"              # 👈 because it’s Ubuntu
-  ami_id         = data.aws_ami.ubuntu.id
   instance_types = ["m7i-flex.large"]
   disk_size      = 20
 
